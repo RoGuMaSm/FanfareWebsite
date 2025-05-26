@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html><head>
+
+
+  <title>fanfare</title>
+  <meta name="description" content="website description">
+  <meta name="keywords" content="website keywords, website keywords">
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <link rel="stylesheet" type="text/css" href="fanfare_files/style.css">
+</head>
+
+<body>
+   <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="https://www.devierheemskinderenbertem.be/index.html">K.F. DE VIER HEEMSKINDEREN</a></h1>
+          <h2>Fanfare en toneelgezelschap</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="https://www.devierheemskinderenbertem.be/index.html">Home</a></li>
+          <li class="selected"><a href="https://www.devierheemskinderenbertem.be/fanfare.html">Fanfare</a></li>
+          <li><a href="https://www.devierheemskinderenbertem.be/toneel.html">Toneel</a></li>
+          <li><a href="https://www.devierheemskinderenbertem.be/jeugdwerking.html">Jeugdwerking</a></li>
+	  <li><a href="https://www.devierheemskinderenbertem.be/feestzaal.html">Feestzaal</a></li>
+	  <li><a href="https://www.devierheemskinderenbertem.be/bestuur.html">Bestuur</a></li>
+	  <li><a href="https://www.devierheemskinderenbertem.be/foto.html">Foto's</a></li>
+          <li><a href="https://www.devierheemskinderenbertem.be/contact.html">Contacteer Ons</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>Agenda</h3>
+            <h5>Jubileumconcert Kon. Fanfare Sint-Lambertus Leefdaal met gastoptreden van Gunther Neefs zaterdag 24 mei 2025</h5>
+            <h5>Muziekoptreden tijdens misviering zondag 15 juni 2025</h5>
+            <h5>Muziekoptreden Jaarmarkt zaterdag 27 september 2025</h5>
+            <h5>Eetfestijn zaterdag 25 en zondag 26 oktober 2025</h5>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>Interessante Links</h3>
+            <ul>
+              <li><a href="http://nl.wikipedia.org/wiki/Fanfare_(orkest)">Fanfare</a></li>
+              <li><a href="https://www.devierheemskinderenbertem.be/fanfare/Concert_mar2025_KF4.MP3">Concert 2025</a>
+              </li><li><a href="https://www.devierheemskinderenbertem.be/fanfare/Concert_mar2025_KF4_bisnummer.MP3">Concert bisnummer 2025</a></li>
+            </ul>
+              
+            
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        </div>
+      <div id="content">
+    <h3>Concert 2025</h3>
+          <hp>Het jaarconcert van de fanfare was weer een succes. Graag 
+willen wij dan ook al de muzikanten, de dirigent en mensen die achter de
+ schermen meewerkten nog eens bedanken voor dit prachtig muziekoptreden.
+        We kunnen terugkijken op een succesvol muziekconcert. Wij wensen
+ de dirigent, muzikanten en het publiek te bedanken voor het prachtige 
+concert</p>
+
+
+<H3>Playlist</H3>
+  <div class="container">
+    
+      <ul id="playlist">
+        <li data-src="https://www.devierheemskinderenbertem.be/fanfare/Concert_mar2025_KF4.MP3">Concert</li>
+        <li data-src="https://www.devierheemskinderenbertem.be/fanfare/Concert_mar2025_KF4_bisnummer.MP3">Bisnummer</li>
+        <li data-src="fanfare_files\Waltznr2.mp3">2nd Waltz</li>
+      </ul>
+  
+      <div class="player-area">
+        <div id="nowPlaying">Loading...</div>
+        <audio id="audioPlayer" controls></audio>
+      </div>
+          </div>
+        
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p><a href="https://www.devierheemskinderenbertem.be/index.html">Home</a> | <a href="https://www.devierheemskinderenbertem.be/fanfare.html">Fanfare</a> | <a href="https://www.devierheemskinderenbertem.be/toneel.html">Toneel</a> | <a href="https://www.devierheemskinderenbertem.be/jeugdwerking.html">Jeugdwerking</a> | <a href="https://www.devierheemskinderenbertem.be/feestzaal.html">Feestzaal</a> |  <a href="https://www.devierheemskinderenbertem.be/bestuur.html">Bestuur</a> |  <a href="https://www.devierheemskinderenbertem.be/foto.html">Foto's</a> |  <a href="https://www.devierheemskinderenbertem.be/contact.html">Contacteer Ons</a></p>
+      <p>Copyright Luc Verheyden vzw Koninklijke Fanfare De Vier Heemskinderen</p>
+    </div>
+  
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+      const audioPlayer = document.getElementById('audioPlayer');
+      const playlistItems = document.querySelectorAll('#playlist li');
+      let currentTrack = 0;
+
+      function updateActiveTrack(index) {
+        playlistItems.forEach(item => item.classList.remove('active'));
+        playlistItems[index].classList.add('active');
+      }
+
+      function loadTrack(index) {
+        const src = playlistItems[index].getAttribute('data-src');
+        const title = playlistItems[index].textContent;
+        audioPlayer.src = src;
+        audioPlayer.play();
+        updateActiveTrack(index);
+        document.getElementById('nowPlaying').textContent = title;
+      }
+
+      playlistItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          currentTrack = index;
+          loadTrack(currentTrack);
+        });
+      });
+
+      audioPlayer.addEventListener('ended', () => {
+        currentTrack = (currentTrack + 1) % playlistItems.length;
+        loadTrack(currentTrack);
+      });
+
+      loadTrack(currentTrack);
+    });
+
+    </script>
+  </body>
+</html>
